@@ -99,11 +99,11 @@ $$
 
 | Pseudo Random             |  Simulated | Real Quantum Computer |
 :-------------------------:|:-------------------------: | :-------------------------:
-![BOX PLOT](plots\Pseudo-Random\box.png) | ![BOX PLOT](plots\Simulated\box.png) | ![BOX PLOT](plots\Real-Quantum-Computer\box.png)
-![HIST PLOT](plots\Pseudo-Random\hist.png) | ![HIST PLOT](plots\Simulated\hist.png) | ![HIST PLOT](plots\Real-Quantum-Computer\hist.png)
-![KDE PLOT](plots\Pseudo-Random\kde.png) | ![KDE PLOT](plots\Simulated\kde.png) | ![KDE PLOT](plots\Real-Quantum-Computer\kde.png)
-![LINE PLOT](plots\Pseudo-Random\line.png) | ![LINE PLOT](plots\Simulated\line.png) | ![LINE PLOT](plots\Real-Quantum-Computer\line.png)
-![SCATTER PLOT](plots\Pseudo-Random\scatter.png) | ![SCATTER PLOT](plots\Simulated\scatter.png) | ![SCATTER PLOT](plots\Real-Quantum-Computer\scatter.png)
+![BOX PLOT](plots/Pseudo-Random/box.png) | ![BOX PLOT](plots/Simulated/box.png) | ![BOX PLOT](plots/Real-Quantum-Computer/box.png)
+![HIST PLOT](plots/Pseudo-Random/hist.png) | ![HIST PLOT](plots/Simulated/hist.png) | ![HIST PLOT](plots/Real-Quantum-Computer/hist.png)
+![KDE PLOT](plots/Pseudo-Random/kde.png) | ![KDE PLOT](plots/Simulated/kde.png) | ![KDE PLOT](plots/Real-Quantum-Computer/kde.png)
+![LINE PLOT](plots/Pseudo-Random/line.png) | ![LINE PLOT](plots/Simulated/line.png) | ![LINE PLOT](plots/Real-Quantum-Computer/line.png)
+![SCATTER PLOT](plots/Pseudo-Random/scatter.png) | ![SCATTER PLOT](plots/Simulated/scatter.png) | ![SCATTER PLOT](plots/Real-Quantum-Computer/scatter.png)
 
 
 
