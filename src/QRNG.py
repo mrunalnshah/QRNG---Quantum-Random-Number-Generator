@@ -56,7 +56,7 @@ class QRandom:
         """
 
         prob_0 = np.abs(np.pow(state[0,0],2))
-        prob_1 = np.abs(np.abs(np.pow(state[1,0],2)))
+        prob_1 = np.abs(np.pow(state[1,0],2))
 
         return np.random.choice([0,1], p=[prob_0, prob_1])
     
@@ -78,16 +78,25 @@ class QRandom:
 
             # Measure the qubit
             return QRandom.measure(state)
+        
+        # Require Qiskit Functionality to run on Aer Simulator
         elif method == "simulate":
             simulator = AerSimulator()
+
             qc = QuantumCircuit(1,1)
             qc.h(0)
             qc.measure(0,0)
+
             tqc = transpile(qc, simulator)
+
             job = simulator.run(tqc, shots=1)
             result = job.result()
+
             counts = result.get_counts()
+            
             return int(list(counts.keys())[0], 2)
+        
+        # Require Qiskit Functionality to run on IBM machine
         elif method == "real":
             service = QiskitRuntimeService(token=api_key, instance=instance_id, channel="ibm_quantum_platform")
             backend = service.backend(backend_name)
@@ -108,7 +117,7 @@ class QRandom:
             return bit
     
     @staticmethod
-    def quantum_random_number(n_bits=8, method="simulate", backend_name=None, api_key=None, instance_id=None):
+    def quantum_random_number(n_bits=8, method="simulate", backend_name=None, api_key=None, instance_id=None, lower_bound=0, upper_bound=255):
         """
         Generates a random integer with n_bits using Quantum Random Bit
 
@@ -117,5 +126,6 @@ class QRandom:
         """
 
         bits = [str(QRandom.quantum_random_bit(method, backend_name=backend_name, api_key=api_key, instance_id=instance_id)) for _ in range(n_bits)]
-        return int("".join(bits), 2)
+        rand_bits = int("".join(bits), 2)
+        return lower_bound + (rand_bits % (upper_bound - lower_bound + 1))
     
