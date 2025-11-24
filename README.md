@@ -83,8 +83,13 @@ $$
 
 
 ## Minimal Circuit
-1. Start with qubit (A quantum state) $$ |0\rangle $$ 
-2. Apply Hadamard (H) which produces equal superposition
+1. Start with qubit (A quantum state)
+
+$$
+    |0\rangle
+$$ 
+
+3. Apply Hadamard (H) which produces equal superposition
    
 $$
    |\psi\rangle = \frac{1}{\sqrt{2}}\left(|0\rangle + |1\rangle\right)
