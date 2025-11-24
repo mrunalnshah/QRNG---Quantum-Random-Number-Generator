@@ -13,13 +13,14 @@ open `src/QRNG.py`, you will see the `QRandom` class with code for hadamard, pau
 2. The Hadamard gate, derived from the Hadamard matrix, is a fundamental one-qubit gate that transforms a qubit into a superposition of the |0⟩ and |1⟩ states.
 
 The Hadamard gate is defined as:
-    $$
-        H = \frac{1}{\sqrt{2}}
-        \begin{pmatrix}
-        1 & 1 \\
-        1 & -1
-        \end{pmatrix}
-    $$
+
+$$
+    H = \frac{1}{\sqrt{2}}
+    \begin{pmatrix}
+    1 & 1 \\
+    1 & -1
+    \end{pmatrix}
+$$
 
 ``` python
     @staticmethod
@@ -33,11 +34,11 @@ The Hadamard gate is defined as:
 If a qubit is in state
 
 $$
-|0\rangle = 
-\begin{pmatrix}
-1 \\
-0
-\end{pmatrix},
+    |0\rangle = 
+    \begin{pmatrix}
+    1 \\
+    0
+    \end{pmatrix},
 $$
 
 ``` python
@@ -50,22 +51,23 @@ $$
 ```
 
 then applying the Hadamard gate gives:
+
 $$
-H|0\rangle = \frac{1}{\sqrt{2}}
-\begin{pmatrix}
-1 & 1 \\
-1 & -1
-\end{pmatrix}
-\begin{pmatrix}
-1 \\
-0
-\end{pmatrix}
-=
-\frac{1}{\sqrt{2}}
-\begin{pmatrix}
-1 \\
-1
-\end{pmatrix}.
+    H|0\rangle = \frac{1}{\sqrt{2}}
+    \begin{pmatrix}
+    1 & 1 \\
+    1 & -1
+    \end{pmatrix}
+    \begin{pmatrix}
+    1 \\
+    0
+    \end{pmatrix}
+    =
+    \frac{1}{\sqrt{2}}
+    \begin{pmatrix}
+    1 \\
+    1
+    \end{pmatrix}.
 $$
 
 ``` python
@@ -83,8 +85,12 @@ $$
 ## Minimal Circuit
 1. Start with qubit (A quantum state) $$ |0\rangle $$ 
 2. Apply Hadamard (H) which produces equal superposition
-    $$ |\psi\rangle = \frac{1}{\sqrt{2}}\left(|0\rangle + |1\rangle\right) $$
-3. Measure the qubit which returns `0` or `1` with 50-50 probability.
+   
+$$
+   |\psi\rangle = \frac{1}{\sqrt{2}}\left(|0\rangle + |1\rangle\right)
+$$
+
+4. Measure the qubit which returns `0` or `1` with 50-50 probability.
 
 ## Result
 
@@ -99,11 +105,11 @@ $$
 
 | Pseudo Random             |  Simulated | Real Quantum Computer |
 :-------------------------:|:-------------------------: | :-------------------------:
-![BOX PLOT](plots\Pseudo-Random\box.png) | ![BOX PLOT](plots\Simulated\box.png) | ![BOX PLOT](plots\Real-Quantum-Computer\box.png)
-![HIST PLOT](plots\Pseudo-Random\hist.png) | ![HIST PLOT](plots\Simulated\hist.png) | ![HIST PLOT](plots\Real-Quantum-Computer\hist.png)
-![KDE PLOT](plots\Pseudo-Random\kde.png) | ![KDE PLOT](plots\Simulated\kde.png) | ![KDE PLOT](plots\Real-Quantum-Computer\kde.png)
-![LINE PLOT](plots\Pseudo-Random\line.png) | ![LINE PLOT](plots\Simulated\line.png) | ![LINE PLOT](plots\Real-Quantum-Computer\line.png)
-![SCATTER PLOT](plots\Pseudo-Random\scatter.png) | ![SCATTER PLOT](plots\Simulated\scatter.png) | ![SCATTER PLOT](plots\Real-Quantum-Computer\scatter.png)
+![BOX PLOT](plots/Pseudo-Random/box.png) | ![BOX PLOT](plots/Simulated/box.png) | ![BOX PLOT](plots/Real-Quantum-Computer/box.png)
+![HIST PLOT](plots/Pseudo-Random/hist.png) | ![HIST PLOT](plots/Simulated/hist.png) | ![HIST PLOT](plots/Real-Quantum-Computer/hist.png)
+![KDE PLOT](plots/Pseudo-Random/kde.png) | ![KDE PLOT](plots/Simulated/kde.png) | ![KDE PLOT](plots/Real-Quantum-Computer/kde.png)
+![LINE PLOT](plots/Pseudo-Random/line.png) | ![LINE PLOT](plots/Simulated/line.png) | ![LINE PLOT](plots/Real-Quantum-Computer/line.png)
+![SCATTER PLOT](plots/Pseudo-Random/scatter.png) | ![SCATTER PLOT](plots/Simulated/scatter.png) | ![SCATTER PLOT](plots/Real-Quantum-Computer/scatter.png)
 
 
 
